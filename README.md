@@ -1,3 +1,13 @@
+# 学习补充
+Open更新导致部分代码无法运行，处理方案参考：
+https://github.com/openai/openai-python/discussions/742
+
+如果用vscode加载conda虚拟环境，每次运行代码，需要加载环境变量：
+```
+%env OPENAI_API_KEY= your key
+```
+
+------------------课程内容---------------------
 # Geektime AI Course
 
 See https://time.geekbang.org/column/intro/100541001

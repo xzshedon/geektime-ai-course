@@ -79,6 +79,46 @@ def get_dir_05():
     import os
     return [d for d in os.listdir('.')]
 
+def get_lower_06():
+    L = ['Hello','World','IBM','Apple']
+    return [s.lower() for s in L]
+
+def print_dir_07():
+    import os
+    filepath = input("请输入一个路径: ")
+    if filepath == "":
+        print("请输入正确的路径")
+    else:
+        for i in os.listdir(filepath):
+            print(os.path.join(filepath,i))
+
+def show_dir_08(filepath):
+    import os
+    for i in os.listdir(filepath):
+        path = (os.path.join(filepath,i))
+        print(path)
+        if os.path.isdir(path):
+            show_dir(path)
+
+def print_file_09(filepath):
+    import os
+    for i in os.listdir(filepath):
+        path = os.path.join(filepath,i)
+        if os.path.isdir(path):
+            print_file_09(path)
+        if path.endswith(".html"):
+            print(path)
+
+def change_key_value_10():
+    dict1={"A":"a","B":"b","C":"c"}
+    print({y:x for x,y in dict1.items()})
+
+
+def nine_take_nine_11():
+    for i in range(1,10):
+        for j in range(1,i+1):
+            print('{}*{}={}\t'.format(j,i,i*j),end='')
+
 
 if __name__ == "__main__":
     print(sort_port_01())

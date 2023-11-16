@@ -118,8 +118,40 @@ def nine_take_nine_11():
     for i in range(1,10):
         for j in range(1,i+1):
             print('{}*{}={}\t'.format(j,i,i*j),end='')
+        print()
+
+def change_str_12():
+    num = ["harden","pard",3,34,45,56,78,45,3,3,8956,98,76]
+    for i in range(num.count(3)):
+        ele_index = num.index(3)
+        num[ele_index] = "3a"
+    print(num)
+
+def leap_year_19():
+    year = int(input("输入一个年份:"))
+    if(year%4)==0:
+        if(year%100)==0:
+            if(year%400)==0:
+                print("{0}是闰年".format(year)) # 整百年能被400整除是闰年
+            else:
+                print("{0}不是闰年".format(year))
+        else:
+            print("{0}是闰年".format(year)) # 非整百年能被4整除是闰年
+    else:
+        print("{0}不是闰年".format(year))
+
+
+def hcf_23(x,y):
+    if x>y:
+        smaller = y
+    else:
+        smaller = x
+    for i in range(1,smaller+1):
+        if(x%i==0) and (y%i==0):
+            return i
 
 
 if __name__ == "__main__":
-    print(sort_port_01())
+    # print(sort_port_01())
+    print(change_str_12())
 
